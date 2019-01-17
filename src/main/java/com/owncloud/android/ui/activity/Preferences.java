@@ -166,14 +166,23 @@ public class Preferences extends PreferenceActivity
         setupDetailsCategory(accentColor, preferenceScreen);
 
         // More
-        setupMoreCategory(accentColor, appVersion);
-
+        //强行删除more模块
+       // setupMoreCategory(accentColor, appVersion);
+        removeDisplayCategory("more");
         // About
         setupAboutCategory(accentColor, appVersion);
 
         // Dev
         setupDevCategory(accentColor, preferenceScreen);
     }
+//强行删除more模块
+    public void removeDisplayCategory(String key) {
+        PreferenceCategory displayOptions = (PreferenceCategory) findPreference(key);
+        getPreferenceScreen().removePreference(displayOptions);
+    }
+
+
+
 
     private void setupDevCategory(int accentColor, PreferenceScreen preferenceScreen) {
         // Dev category
