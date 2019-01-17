@@ -53,7 +53,7 @@
             android:key="show_media_scan_notifications"/>
 	</PreferenceCategory>
 
-	<PreferenceCategory android:title="@string/prefs_category_more" android:key="more">
+	<PreferenceCategory  android:title="@string/prefs_category_more"  android:key="more">
 		<Preference android:title="@string/prefs_calendar_contacts"
 					android:key="calendar_contacts"
 					android:summary="@string/prefs_calendar_contacts_summary" />
@@ -71,19 +71,20 @@
 		<Preference android:title="@string/actionbar_logger" android:key="logger" />
 		<Preference android:title="@string/prefs_imprint" android:key="imprint" />
 	</PreferenceCategory>
+
 	<PreferenceCategory android:title="@string/prefs_category_about" android:key="about">
-		<Preference
-			android:title="@string/privacy"
-			android:id="@+id/privacy"
-			android:key="privacy"/>
-		<Preference
-			android:title="@string/prefs_sourcecode"
-			android:id="@+id/sourcecode"
-			android:key="sourcecode"/>
-		<Preference
-			android:title="@string/prefs_license"
-			android:id="@+id/license"
-			android:key="license"/>
+		<!--<Preference-->
+			<!--android:title="@string/privacy"-->
+			<!--android:id="@+id/privacy"-->
+			<!--android:key="privacy"/>-->
+		<!--<Preference-->
+			<!--android:title="@string/prefs_sourcecode"-->
+			<!--android:id="@+id/sourcecode"-->
+			<!--android:key="sourcecode"/>-->
+		<!--<Preference-->
+			<!--android:title="@string/prefs_license"-->
+			<!--android:id="@+id/license"-->
+			<!--android:key="license"/>-->
 		<Preference android:title="@string/about_title" android:id="@+id/about_app" android:key="about_app" />
 	</PreferenceCategory>
 
