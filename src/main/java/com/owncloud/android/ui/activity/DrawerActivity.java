@@ -363,8 +363,10 @@ public abstract class DrawerActivity extends ToolbarActivity implements DisplayU
 
         DrawerMenuUtil.setupHomeMenuItem(menu, getResources());
 
+//        DrawerMenuUtil.removeMenuItem(menu, R.id.nav_participate,
+//                !getResources().getBoolean(R.bool.participate_enabled));
         DrawerMenuUtil.removeMenuItem(menu, R.id.nav_participate,
-                !getResources().getBoolean(R.bool.participate_enabled));
+            true);
         DrawerMenuUtil.removeMenuItem(menu, R.id.nav_shared, !getResources().getBoolean(R.bool.shared_enabled));
         DrawerMenuUtil.removeMenuItem(menu, R.id.nav_contacts, !getResources().getBoolean(R.bool.contacts_backup)
                 || !getResources().getBoolean(R.bool.show_drawer_contacts_backup));
@@ -450,8 +452,8 @@ public abstract class DrawerActivity extends ToolbarActivity implements DisplayU
                 startActivity(settingsIntent);
                 break;
             case R.id.nav_participate:
-                Intent participateIntent = new Intent(getApplicationContext(), ParticipateActivity.class);
-                startActivity(participateIntent);
+                //Intent participateIntent = new Intent(getApplicationContext(), ParticipateActivity.class);
+                //startActivity(participateIntent);
                 break;
             case R.id.nav_logout:
                 mCheckedMenuItem = -1;
