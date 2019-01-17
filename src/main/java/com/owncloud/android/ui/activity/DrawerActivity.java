@@ -365,8 +365,14 @@ public abstract class DrawerActivity extends ToolbarActivity implements DisplayU
 
 //        DrawerMenuUtil.removeMenuItem(menu, R.id.nav_participate,
 //                !getResources().getBoolean(R.bool.participate_enabled));
+        //强行删除参与
         DrawerMenuUtil.removeMenuItem(menu, R.id.nav_participate,
             true);
+//强行删除相册
+        DrawerMenuUtil.removeMenuItem(menu, R.id.nav_photos,
+            true);
+
+
         DrawerMenuUtil.removeMenuItem(menu, R.id.nav_shared, !getResources().getBoolean(R.bool.shared_enabled));
         DrawerMenuUtil.removeMenuItem(menu, R.id.nav_contacts, !getResources().getBoolean(R.bool.contacts_backup)
                 || !getResources().getBoolean(R.bool.show_drawer_contacts_backup));
