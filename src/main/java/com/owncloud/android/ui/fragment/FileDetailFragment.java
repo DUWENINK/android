@@ -290,49 +290,50 @@ public class FileDetailFragment extends FileFragment implements OnClickListener 
     private void setupViewPager() {
         tabLayout.removeAllTabs();
 
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.drawer_item_activities));
-
-        if (getFile().canReshare()) {
-            tabLayout.addTab(tabLayout.newTab().setText(R.string.share_dialog_title));
-        }
-
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        tabLayout.setSelectedTabIndicatorColor(ThemeUtils.primaryAccentColor(getContext()));
-
-        final FileDetailTabAdapter adapter = new FileDetailTabAdapter(getFragmentManager(), getFile(), account);
-        viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout) {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (activeTab == 0) {
-                    getFileDetailActivitiesFragment().markCommentsAsRead();
-                }
-
-                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
-            }
-        });
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-
-                if (tab.getPosition() == 0) {
-                    getFileDetailActivitiesFragment().markCommentsAsRead();
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-                // unused at the moment
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-                // unused at the moment
-            }
-        });
-
-        tabLayout.getTabAt(activeTab).select();
+      // if(R.string.drawer_item_activities!=R.string.)
+//        tabLayout.addTab(tabLayout.newTab().setText(R.string.drawer_item_activities));
+//
+//        if (getFile().canReshare()) {
+//            tabLayout.addTab(tabLayout.newTab().setText(R.string.share_dialog_title));
+//        }
+//
+//        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+//        tabLayout.setSelectedTabIndicatorColor(ThemeUtils.primaryAccentColor(getContext()));
+//
+//        final FileDetailTabAdapter adapter = new FileDetailTabAdapter(getFragmentManager(), getFile(), account);
+//        viewPager.setAdapter(adapter);
+//        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout) {
+//            @Override
+//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//                if (activeTab == 0) {
+//                    getFileDetailActivitiesFragment().markCommentsAsRead();
+//                }
+//
+//                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+//            }
+//        });
+//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//                viewPager.setCurrentItem(tab.getPosition());
+//
+//                if (tab.getPosition() == 0) {
+//                    getFileDetailActivitiesFragment().markCommentsAsRead();
+//                }
+//            }
+//
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+//                // unused at the moment
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//                // unused at the moment
+//            }
+//        });
+//
+//        tabLayout.getTabAt(activeTab).select();
     }
 
     @Override
