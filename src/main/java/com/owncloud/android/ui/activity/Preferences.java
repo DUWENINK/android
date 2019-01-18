@@ -169,6 +169,8 @@ public class Preferences extends PreferenceActivity
         //强行删除more模块
        // setupMoreCategory(accentColor, appVersion);
         removeDisplayCategory("more");
+        //强制删除常规内容,禁止用户设置文件保存目录
+        removeDisplayCategory("general");
         // About
         setupAboutCategory(accentColor, appVersion);
 
