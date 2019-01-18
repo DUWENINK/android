@@ -440,9 +440,9 @@ public abstract class DrawerActivity extends ToolbarActivity implements DisplayU
                 startActivity(trashbinIntent);
                 break;
             case R.id.nav_activity:
-                Intent activityIntent = new Intent(getApplicationContext(), ActivitiesActivity.class);
-                activityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(activityIntent);
+//                Intent activityIntent = new Intent(getApplicationContext(), ActivitiesActivity.class);
+//                activityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                startActivity(activityIntent);
                 break;
             case R.id.nav_notifications:
                 Intent notificationsIntent = new Intent(getApplicationContext(), NotificationsActivity.class);

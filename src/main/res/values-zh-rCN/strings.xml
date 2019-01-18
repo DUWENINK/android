@@ -732,7 +732,6 @@
     <string name="notification_channel_push_name">推送通知</string>
     <string name="notification_channel_push_description">显示服务器推送的通知，包括：在评论中被提及、收到新的远程分享、管理员发布的公告等</string>
     <string name="sendbutton_description">发送按钮的图标</string>
-
     <string name="oauth_2_0_auth_end_point_address_hint">验证端点地址</string>
     <string name="oauth_2_0_access_end_point_address_hint">访问端点地址</string>
     <string name="hint_name">名称</string>
