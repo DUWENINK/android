@@ -30,7 +30,8 @@
         android:layout_marginLeft="@dimen/standard_padding"
         android:layout_marginRight="@dimen/zero"
         android:layout_marginStart="@dimen/standard_padding"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/commentInputField"
